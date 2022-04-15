@@ -121,7 +121,7 @@ def main():
 
     # Augment path to include our fancy things.
     os.environ['PATH'] += os.pathsep + os.pathsep.join([
-        self_path,
+pat
         os.path.abspath(os.path.join('tools', 'build')),
         ])
 
