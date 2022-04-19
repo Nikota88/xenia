@@ -39,12 +39,17 @@ using System.Windows.Forms;
 
 namespace shader_playground {
   static class Program {
-    [STAThread]
-    static void Main()
+        private static void Main()
+        {
+            Main(NewMethod());
+        }
+
+        [STAThread]
+    static void Main(Editor editor)
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(NewMethod());
+            NewMethod1(editor);
 
             Editor NewMethod()
             {
@@ -55,6 +60,11 @@ namespace shader_playground {
                     return new Editor();
                 }
             }
+        }
+
+        private static void NewMethod1(Editor editor)
+        {
+            Application.Run(editor);
         }
     }
 }
