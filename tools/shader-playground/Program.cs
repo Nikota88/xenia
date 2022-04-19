@@ -40,10 +40,21 @@ using System.Windows.Forms;
 namespace shader_playground {
   static class Program {
     [STAThread]
-    static void Main() {
-      Application.EnableVisualStyles();
-      Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new Editor());
+    static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(NewMethod());
+
+            Editor NewMethod()
+            {
+                return NewMethod1();
+
+                Editor NewMethod1()
+                {
+                    return new Editor();
+                }
+            }
+        }
     }
-  }
 }
