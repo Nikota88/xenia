@@ -67,7 +67,7 @@ def import_vs_environment():
       A version such as 2015 or None if no installation is found.
     """
 
-    if sys.platform != 'win32':
+    if sys.platform != 'win64':
         return None
 
     version = 0
